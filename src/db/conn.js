@@ -7,7 +7,7 @@ async function connectToMongoDB() {
     if (!CONNECTION_URL) {
         console.error("Error: MONGODB_CONNECTION_URL environment variable is not set.");
     } else {
-        await mongoose.connect("mongodb+srv://vanshbaijal:Vansh123@cluster1.smfk9qy.mongodb.net/Stationary?retryWrites=true&w=majority",
+        await mongoose.connect(CONNECTION_URL,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
